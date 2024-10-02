@@ -34,18 +34,23 @@ console.log(coinFlip);
 
 let choice = prompt("Select 'Heads' or 'Tails'?: ").toLowerCase().trim();
 
-if (coinFlip === 0 && choice === 'heads') {
-    alert('The flip was heads and you chose heads...you win!');
-} else if (coinFlip === 0 && choice === 'tails') {
-    alert('The flip was heads but you chose tails...you lose!');
-} else if (coinFlip === 1 && choice === 'heads') {
-    alert('The flip was tails but you chose heads...you lose!');
-} else if (coinFlip === 1 && choice === 'tails') {
-    alert('The flip was tails and you chose tails...you win!');
-} else {
-    alert('Invalid choice, please select either heads or tails');
-}
-
+if (coinFlip === 0) {
+    if (choice === 'heads') {
+        alert('The flip was heads and you chose heads...you win!');
+    } else if (choice === 'tails') {
+        alert('The flip was heads but you chose tails...you lose!');
+    }else {    
+        alert('Invalid choice, please select either heads or tails');
+    }
+} else if (coinFlip === 1) {
+    if (choice === 'heads') {
+        alert('The flip was tails but you chose heads...you lose!');
+    } else if (choice === 'tails') {
+        alert('The flip was tails and you chose tails...you win!');
+    }else {    
+        alert('Invalid choice, please select either heads or tails');
+    }
+} 
 
 
 // if random number is between 1-10 with anything 5 or less is being heads and anything greater than 5 being tails
@@ -55,15 +60,20 @@ if (coinFlip === 0 && choice === 'heads') {
 
 // let choice = prompt("Select 'Heads' or 'Tails'?: ").toLowerCase().trim();
 
-// if (coinFlip <= 5  && choice === 'heads') {
-//     alert('The flip was heads and you chose heads...you win!');
-// } else if (coinFlip <= 5 && choice === 'tails') {
-//     alert('The flip was heads but you chose tails...you lose!');
-// } else if (coinFlip > 5 && choice === 'heads') {
-//     alert('The flip was tails but you chose heads...you lose!');
-// } else if (coinFlip > 5 && choice === 'tails') {
-//     alert('The flip was tails and you chose tails...you win!');
-// } else {
-//     alert('Invalid choice, please select either heads or tails');
-// }
-
+// if (coinFlip <= 5) {
+//     if (choice === 'heads') {
+//         alert('The flip was heads and you chose heads...you win!');
+//     } else if (choice === 'tails') {
+//         alert('The flip was heads but you chose tails...you lose!');
+//     }else {    
+//         alert('Invalid choice, please select either heads or tails');
+//     }
+// } else if (coinFlip > 5) {
+//     if (choice === 'heads') {
+//         alert('The flip was tails but you chose heads...you lose!');
+//     } else if (choice === 'tails') {
+//         alert('The flip was tails and you chose tails...you win!');
+//     }else {    
+//         alert('Invalid choice, please select either heads or tails');
+//     }
+// } 
